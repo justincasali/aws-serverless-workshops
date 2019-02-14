@@ -102,7 +102,7 @@ Congratulations!  You have successfully create a serverless web service project 
 
 ## Clone CodeCommit Git Repository
 
-**Goal:** From the CodeStar dashboard for the `uni-api` project, find the CodeCommit instructions to clone the Git repository to your local workstation.
+**Goal:** From the CodeStar dashboard for the `uni-api` project, setup a new **AWS Cloud9 IDE** and clone your Git repository from CodeCommit into it.
 
 <details>
 <summary><strong>HOW TO clone the CodeCommit git repository (expand for details)</strong></summary><p>
@@ -120,10 +120,14 @@ Congratulations!  You have successfully create a serverless web service project 
 
     ![CodeStar 12](images/codestar-12.png)
 
-3. Leave the **Recommended instances** tab selected and leave the default **t2.micro** instance selected.
-4. Expand **Network settings (advanced)** and ensure the **vpc-xxxx (Default)** default VPC is selected.
-5. Expand **Environment name and description** and note that the Cloud9 IDE that you create will be named the same as the CodeStar project, 'uni-api'. Leave the default settings.
-6. Expand **Cost-savings settings** and note that the Cloud9 IDE will be shutdown after 30 minutes of no use to save cost cost. Leave the default settings and click **Next**.
+3. Configure your **AWS Cloud9 IDE** as follows:
+ - Leave the **Recommended instances** tab selected and leave the default **t2.micro** instance selected.
+
+ - Expand **Network settings (advanced)** and ensure that the default VPC `vpc-xxxx (Default)` is selected.
+	
+ - Expand **Environment name and description** and note that the Cloud9 IDE that you create will be named the same as the CodeStar project, `uni-api`. Leave the default settings.
+	
+ - Expand **Cost-savings settings** and note that the Cloud9 IDE will be shutdown after 30 minutes of no use to save cost cost. Leave the default settings and click **Next**.
 
     ![CodeStar 13](images/codestar-13.png)
 
