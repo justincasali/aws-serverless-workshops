@@ -20,6 +20,7 @@ If you're using the latest version of the Chrome, Firefox, or Safari web browser
 
 This workshop can be deployed in any AWS region that supports the following services:
 
+- AWS Cloud9
 - Amazon API Gateway
 - Amazon DynamoDB
 - Amazon S3
@@ -29,7 +30,7 @@ This workshop can be deployed in any AWS region that supports the following serv
 - AWS Lambda
 - AWS X-Ray
 
-This workshop is available in the **Ireland** and **Sydney** regions.
+This workshop is available in the **N. Virginia**, **Oregon** and **Ireland** regions.
 
 
 Once you've chosen a region, you should deploy all of the resources for this workshop there. Make sure you select your region from the dropdown in the upper right corner of the AWS Console before getting started.
@@ -97,7 +98,7 @@ Once you've chosen a region, you should deploy all of the resources for this wor
 </p></details>
 <p>
 
-Congratulations!  You have successfully create a serverless web service project using CodeStar.  In the next section, you will use a Git client to clone the repository to your workstation.
+Congratulations!  You have successfully create a serverless web service project using CodeStar.  In the next section, you will use a Git client to clone the repository to your Cloud9 development environment.
 
 ## Clone CodeCommit Git Repository
 
@@ -114,14 +115,22 @@ Congratulations!  You have successfully create a serverless web service project 
     
     ![CodeStar 11](images/codestar-11b.png)
     
-1. You can select instructions to clone the CodeCommit respository using **Visual Studio**, **Eclipse**, or **Command line tools**.  Click **See instructions** for instructions for cloning to **macOS**, **Windows**, and **Linux** operating systems.  Complete the instructions to clone the CodeCommit Git repository to your local workstation.
+1. You can select instructions to clone the CodeCommit respository using **AWS Cloud9**, **Visual Studio**, **Eclipse**, or **Command line tools**.
+2. Select **AWS Cloud9** and click **Next** to setup your **AWS Cloud9** IDE environment and clone your CodeCommit Git repository to it.
 
     ![CodeStar 12](images/codestar-12.png)
+
+3. Leave the **Recommended instances** tab selected and leave the default **t2.micro** instance selected.
+4. Expand **Network settings (advanced)** and ensure the **vpc-xxxx (Default)** default VPC is selected.
+5. Expand **Environment name and description** and note that the Cloud9 IDE that you create will be named the same as the CodeStar project, 'uni-api'. Leave the default settings.
+6. Expand **Cost-savings settings** and note that the Cloud9 IDE will be shutdown after 30 minutes of no use to save cost cost. Leave the default settings and click **Next**.
+
+    ![CodeStar 13](images/codestar-13.png)
 
 </p></details>
 <p>
 
-Congratulations!  You have successfully cloned the `uni-api` project to your local workstation.  In future modules, you will use this local version to commit changes to the source code, push them to the project Git repository, and trigger automatic execution of the project's continuous delivery pipeline.
+Congratulations!  You have successfully cloned the `uni-api` project to a newly created AWS Cloud9 IDE that you can use to develop and deploy your application.  In future modules, you will use this local version to commit changes to the source code, push them to the project Git repository, and trigger automatic execution of the project's continuous delivery pipeline.
 
 
 

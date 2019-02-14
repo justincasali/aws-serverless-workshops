@@ -16,27 +16,62 @@ See the screenshot below for a depiction of the continuous delivery pipeline tha
 
 If you'd like to jump in and get started please visit the [CodeStar Project](0_CodeStar) module page to begin the workshop.
 
-## Prerequisites
+## Pre-requisites
 
 ### AWS Account
 
-In order to complete this workshop you'll need an AWS Account with access to create AWS IAM, S3, DynamoDB, Lambda, API Gateway, CodePipeline, and CodeBuild resources. The code and instructions in this workshop assume only one student is using a given AWS account at a time. If you try sharing an account with another student, you'll run into naming conflicts for certain resources. You can work around these by appending a unique suffix to the resources that fail to create due to conflicts, but the instructions do not provide details on the changes required to make this work.
+In order to complete this workshop you'll need an AWS Account with access to create AWS IAM, Cloud9, S3, DynamoDB, Lambda, API Gateway, CodePipeline, and CodeBuild resources. The code and instructions in this workshop assume only one student is using a given AWS account at a time. If you try sharing an account with another student, you'll run into naming conflicts for certain resources. You can work around these by appending a unique suffix to the resources that fail to create due to conflicts, but the instructions do not provide details on the changes required to make this work.
 
 All of the resources you will launch as part of this workshop are eligible for the AWS free tier if your account is less than 12 months old. See the [AWS Free Tier page](https://aws.amazon.com/free/) for more details.
 
-### AWS Command Line Interface
+### AWS Cloud9 IDE
 
-To complete the first module of this workshop you'll need the AWS Command Line Interface (CLI) installed on your local machine. You'll use the CLI to copy objects into your S3 website bucket.
+To complete the first module of this workshop you'll need the AWS Cloud9 IDE deployed in your AWS account. You'll use the AWS CLI embedded in the AWS Cloud9 IDE to copy objects into your S3 website bucket.
 
-Follow the [AWS CLI Getting Started](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-set-up.html) guide to install and configure the CLI on your machine.
+AWS Cloud9 is a cloud-based integrated development environment (IDE) that lets you write, run, and debug your code with just a browser. It includes a code editor, debugger, and terminal. Cloud9 comes pre-packaged with essential tools for popular programming languages and the AWS Command Line Interface (CLI) pre-installed so you don’t need to install files or configure your laptop for this workshop. Your Cloud9 environment will have access to the same AWS resources as the user with which you logged into the AWS Management Console.
+
+Take a moment now and setup your Cloud9 development environment.
+
+✅ Step-by-step Instructions
+
+Go to the AWS Management Console, click **Services** then select **Cloud9** under Developer Tools.
+
+Click **Create environment**.
+
+Enter **Development** into **Name** and optionally provide a **Description**.
+
+Click **Next step**.
+
+You may leave **Environment settings** at their defaults of launching a new **t2.micro** EC2 instance which will be paused after **30 minutes** of inactivity.
+
+Click **Next step**.
+
+Review the environment settings and click **Create environment**. It will take several minutes for your environment to be provisioned and prepared.
+
+Once ready, your IDE will open to a welcome screen. Below that, you should see a terminal prompt similar to:
+
+![Wild Rydes Unicorn API Continuous Delivery Pipeline](images/setup-cloud9-terminal.png)
+
+You can run AWS CLI commands in here just like you would on your local computer. Verify that your user is logged in by running **`aws sts get-caller-identity`**.
+
+You’ll see output indicating your account and user information:
+
+~~~~
+Admin:~/environment $ aws sts get-caller-identity
+
+{
+    "Account": "123456789012",
+    "UserId": "AKIAI44QH8DHBEXAMPLE",
+    "Arn": "arn:aws:iam::123456789012:user/Alice"
+}
+~~~~
+
+Keep your AWS Cloud9 IDE opened in a tab throughout this workshop as you’ll use it for activities like running AWS SAM and the AWS CLI.
 
 ### Browser
 
 We recommend you use the latest version of Chrome or Firefox when testing the web application UI.
 
-### Text Editor
-
-You will need a local text editor for making minor updates to configuration files.
 
 ## Modules
 
